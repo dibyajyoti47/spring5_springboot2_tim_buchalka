@@ -49,4 +49,8 @@
 			</plugin>
 		</plugins>
 	</build>
+	<modules>
+		<module>console</module>
+		<module>core</module>
+	</modules>
 </project>
