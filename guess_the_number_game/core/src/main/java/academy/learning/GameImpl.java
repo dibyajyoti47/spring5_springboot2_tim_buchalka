@@ -6,6 +6,7 @@ import javax.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,7 +18,10 @@ public class GameImpl implements Game{
     // == fields ==
     @Autowired
     private NumberGenerator numberGenerator;
-    private int guessCount = 10;
+    
+    @Autowired
+    @Qualifier("guessCount")
+    private int guessCount;
     private int number;
     private int guess;
     private int smallest;
