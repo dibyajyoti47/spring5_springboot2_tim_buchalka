@@ -9,7 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Component
+@Getter
 public class GameImpl implements Game{
 	
 	// == constants ==
@@ -23,7 +27,10 @@ public class GameImpl implements Game{
     @Qualifier("guessCount")
     private int guessCount;
     private int number;
+    
+    @Setter
     private int guess;
+    
     private int smallest;
     private int biggest;
     private int remainingGuesses;
@@ -51,36 +58,6 @@ public class GameImpl implements Game{
     public void preDestroy() {
     	log.info("pre destroy");
     }
-    
-    @Override
-    public int getNumber() {
-        return number;
-    }
-
-    @Override
-    public int getGuess() {
-        return guess;
-    }
-
-    @Override
-    public void setGuess(int guess) {
-        this.guess = guess;
-    }
-
-    @Override
-    public int getSmallest() {
-        return smallest;
-    }
-
-    @Override
-    public int getBiggest() {
-        return biggest;
-    }
-
-    @Override
-    public int getRemainingGuesses() {
-        return remainingGuesses;
-    }
 
     @Override
     public void check() {
@@ -100,10 +77,7 @@ public class GameImpl implements Game{
         remainingGuesses--;
     }
 
-    @Override
-    public boolean isValidNumberRange() {
-        return validNumberRange;
-    }
+    
 
     @Override
     public boolean isGameWon() {
@@ -120,9 +94,7 @@ public class GameImpl implements Game{
         validNumberRange = (guess >= smallest) && (guess <= biggest);
     }
 
-	public void setNumberGenerator(NumberGenerator numberGenerator) {
-		this.numberGenerator = numberGenerator;
-	}	
+		
     
     
 }

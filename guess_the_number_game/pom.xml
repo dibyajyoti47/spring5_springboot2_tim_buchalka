@@ -11,6 +11,7 @@
 		<spring.version>5.0.5.RELEASE</spring.version>
 		<java.version>10</java.version>
 		<anotation-api.version>1.3.2</anotation-api.version>
+		<lombok-version>1.18.12</lombok-version>
 	</properties>
 	<dependencies>
 
@@ -32,6 +33,11 @@
 			<groupId>javax.annotation</groupId>
 			<artifactId>javax.annotation-api</artifactId>
 			<version>${anotation-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok-version}</version>
 		</dependency>
 
 	</dependencies>

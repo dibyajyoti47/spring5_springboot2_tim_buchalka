@@ -1,7 +1,8 @@
-academy\learning\AppConfig.class
 academy\learning\GameImpl.class
 academy\learning\NumberGeneratorImpl.class
 academy\learning\MessageGeneratorImpl.class
 academy\learning\MessageGenerator.class
 academy\learning\NumberGenerator.class
 academy\learning\Game.class
+academy\learning\config\GameConfig.class
+academy\learning\config\AppConfig.class
